@@ -23,7 +23,7 @@ export default function IngredientsDetailsScreen(props) {
     });
   }, [recipeTitle]);
 
-  console.log('URL finale utilisée :', `http://192.168.43.78:3000/recettes/${recipeId}/ingredients`);
+  console.log('URL finale utilisée :', `http://172.20.10.13:3000/recettes/${recipeId}/ingredients`);
   console.log('Type de recipeId:', typeof recipeId, 'Valeur:', recipeId);
 
 
@@ -39,7 +39,7 @@ export default function IngredientsDetailsScreen(props) {
       const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 secondes
       
       const response = await fetch(
-        `http://192.168.43.78:3000/recettes/${recipeId}/ingredients`,
+        `http://172.20.10.13:3000/recettes/${recipeId}/ingredients`,
         {
           signal: controller.signal,
           headers: {

@@ -25,7 +25,7 @@ export default function ManageRecipeScreen() {
       setLoading(true);
       console.log('Chargement des ingrédients...');
       
-      const res = await fetch('http://192.168.43.78:3000/ingredients', {
+      const res = await fetch('http://172.20.10.13:3000/ingredients', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export default function ManageRecipeScreen() {
     try {
       const token = await AsyncStorage.getItem('token');
       
-      const res = await fetch('http://192.168.43.78:3000/recipes/full', {
+      const res = await fetch('http://172.20.10.13:3000/recipes/full', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

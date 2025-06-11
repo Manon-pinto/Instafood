@@ -28,7 +28,7 @@ export default function HomeScreen(props) {
 
   const fetchRecipes = async () => {
     try {
-      const response = await fetch("http://192.168.43.78:3000/recettes");
+      const response = await fetch("http://172.20.10.13:3000/recettes");
       const json = await response.json();
       const formattedData = json.map((item) => ({
         recipeId: item.id_recettes,

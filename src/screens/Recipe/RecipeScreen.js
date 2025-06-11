@@ -34,7 +34,7 @@ export default function RecipeScreen(props) {
   }, [navigation]);
 
   useEffect(() => {
-    axios.get(`http://192.168.43.78:3000/recettes/${recipeId}`)
+    axios.get(`http://172.20.10.13:3000/recettes/${recipeId}`)
       .then((response) => {
         const data = response.data;
         

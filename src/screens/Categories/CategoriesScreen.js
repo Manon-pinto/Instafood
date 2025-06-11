@@ -12,11 +12,11 @@ export default function App() {
     async function fetchData() {
       try {
         // 1. Récupérer toutes les catégories
-        const categoriesResponse = await axios.get('http://192.168.43.78:3000/categories');
+        const categoriesResponse = await axios.get('http://172.20.10.13:3000/categories');
         const categories = categoriesResponse.data;
 
         // 2. Récupérer toutes les recettes
-        const recipesResponse = await axios.get('http://192.168.43.78:3000/recettes');
+        const recipesResponse = await axios.get('http://172.20.10.13:3000/recettes');
         const recipes = recipesResponse.data;
 
         // 3. Construire la liste des catégories avec l'image de la première recette associée

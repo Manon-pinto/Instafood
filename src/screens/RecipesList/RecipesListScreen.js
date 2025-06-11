@@ -24,7 +24,7 @@ export default function RecipesList() {
     if (!categoryId) return;
 
     axios
-      .get("http://192.168.43.78:3000/recettes")
+      .get("http://172.20.10.13:3000/recettes")
       .then((res) => {
         const filtered = res.data.filter(
           (recipe) => Number(recipe.id_categories) === Number(categoryId)
